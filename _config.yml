@@ -6,12 +6,10 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: Webjeda cards
-email: your-email@domain.com
+title: bmdoherty learning
+email: bmdoherty@sidewinder.co.uk
 description: > # this means to ignore newlines until "baseurl:"
-  Webjeda Cards is a Bootstrap based jekyll theme for portfolio, photography or any kind of blog.
-  
-  
+  Place to hold learning materials
   
 baseurl: "/learning" # the subpath of your site, e.g. /blog
 url: "http://webjeda.com" # the base hostname & protocol for your site
@@ -32,21 +30,21 @@ paginate: 6
 paginate_path: /page:num/
 
 # Tracker
-analytics: UA-83979019-1
+analytics: 
 
 # Comments
-disqus-shortname: webjeda-demo
+disqus-shortname: 
 
 #social
-facebook: http://facebook.com/webjeda
-quora: http://quora.com/sharathdt
-twitter: http://twitter.com/@webjeda
-github: http://github.com/webjeda
+facebook: http://facebook.com/
+quora: http://quora.com/
+twitter: http://twitter.com/
+github: http://github.com/
 
 #facebook like box
-fb-app-id: 549480635219583
-fb-page-url: https://www.facebook.com/webjeda/
-fb-page-title: webjeda
+fb-app-id: 
+fb-page-url: https://www.facebook.com/
+fb-page-title: 
 
 # Sass style
 sass:
