@@ -32,7 +32,7 @@ git checkout -- test.html index.html
 remove the most recent commit, and all its changes reset to commit before last, HEAD^
 git reset --hard HEAD^
 
-Add address as the origin repo.
+Add address in the origin repo.
 git remote add origin git@test.com:example/test.git
 
 git push -u origin master
