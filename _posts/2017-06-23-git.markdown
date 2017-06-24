@@ -387,3 +387,10 @@ create branch from a commit
 {% highlight bash %}
 git branch mybranch aaafb5e3e33a174a5cb5f45c543d3dd927dfdf32
 {% endhighlight %}
+
+create upstream
+{% highlight bash %}
+git remote add upstream https://github.com/deadlyvipers/dojo_rules.git
+git fetch upstream
+git merge upstream/master master
+{% endhighlight %}
