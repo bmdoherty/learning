@@ -22,7 +22,7 @@ git config alias.co checkout
 Common shortcut aliases
 {% highlight bash %}
 [alias]
-    st = status
+    st = status -s #silent mode
     ci = commit
     br = branch
     co = checkout
@@ -47,6 +47,11 @@ git config core.autocrlf input
 windows platform, convert line endings from Unix to Windows formats on checkout.
 {% highlight bash %}
 git config core.autocrlf true
+{% endhighlight %}
+
+Default new branches to fetch then rebase
+{% highlight bash %}
+git config --global pull.rebase true
 {% endhighlight %}
 
 .gitattributes
