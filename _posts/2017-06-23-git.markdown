@@ -31,10 +31,12 @@ Common shortcut aliases
     cp = cherry-pick
     cl = clone
 
+    unstage = reset HEAD --
+    last = log -1 HEAD
+
     lg = log -p
     who = shortlog -s --
     ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
-    ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
 {% endhighlight %}
 
 unix platform, fix any rogue windows line endings by converting to lf on commit
