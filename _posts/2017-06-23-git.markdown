@@ -10,168 +10,260 @@ categories: [one, two]
 Notes on using Git.
 
 {% highlight bash %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
+git config --global user.name 'bmdoherty'
 {% endhighlight %}
 
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
-
-[jekyll-docs]: http://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/
-
-
-
-git config --global user.name 'bmdoherty'
-
 Set up a new Git repo within the current directory.
+{% highlight bash %}
 git init
+{% endhighlight %}
 
+{% highlight bash %}
 git status
+{% endhighlight %}
 
+{% highlight bash %}
 git add .
+{% endhighlight %}
 
 Use the given <msg> as the commit message. 
+{% highlight bash %}
 git commit -m 'add file'
+{% endhighlight %}
 
+{% highlight bash %}
 git log
+{% endhighlight %}
 
+{% highlight bash %}
 git diff
+{% endhighlight %}
 
+{% highlight bash %}
 git diff --staged
+{% endhighlight %}
 
+{% highlight bash %}
 git reset index.html
+{% endhighlight %}
 
 automatically stage files that have been modified and deleted & commit
+{% highlight bash %}
 git commit -a -m 'commit already tracked'
+{% endhighlight %}
 
+{% highlight bash %}
 git commit --amend -m 'stuff'
+{% endhighlight %}
 
 Undo the commit, and put the files back in staging.
+{% highlight bash %}
 git reset --soft HEAD^
+{% endhighlight %}
 
 Discard your changes, '--' dnt accidemtallu checkout branch 
+{% highlight bash %}
 git checkout -- test.html index.html
+{% endhighlight %}
 
 remove the most recent commit, and all its changes reset to commit before last, HEAD^
+{% highlight bash %}
 git reset --hard HEAD^
+{% endhighlight %}
 
 Add address in the origin repo.
+{% highlight bash %}
 git remote add origin git@test.com:example/test.git
+{% endhighlight %}
 
+{% highlight bash %}
 git push -u origin master
+{% endhighlight %}
 
 clone a repo
+{% highlight bash %}
 git clone git@test.com:example/test.git
+{% endhighlight %}
 
 get a list of all our remotes
+{% highlight bash %}
 git remote -v
+{% endhighlight %}
 
 create branch and checkout one line
+{% highlight bash %}
 git checkout -b mybranch
+{% endhighlight %}
 
 bring changes from mybranch into master
+{% highlight bash %}
 git checkout master
 git merge mybranch
+{% endhighlight %}
+
 
 git pull to fetch and merge at the same time
+{% highlight bash %}
 git pull
+{% endhighlight %}
 
 mark conflict as resoved, 
+{% highlight bash %}
 git add .
+{% endhighlight %}
 
 push a local branch to a remote
+{% highlight bash %}
 git push origin mybranch
+{% endhighlight %}
 
 get remotes
+{% highlight bash %}
 git fetch
+{% endhighlight %}
 
 list of remote branches
+{% highlight bash %}
 git branch -r
+{% endhighlight %}
 
 delete remote branch
+{% highlight bash %}
 git push origin :mybranch
+{% endhighlight %}
 
 branch status, Check for stale branches that are tracking "origin".
+{% highlight bash %}
 git remote show origin
+{% endhighlight %}
 
 Clean up your local references
+{% highlight bash %}
 git remote prune origin
+{% endhighlight %}
 
 Display the tags
+{% highlight bash %}
 git tag
+{% endhighlight %}
 
 create tag with message
+{% highlight bash %}
 git tag -a 'v1.2.3' -m 'message'
+{% endhighlight %}
 
 push tags to origin
+{% highlight bash %}
 git push -tags
+{% endhighlight %}
 
 checkout a tag
+{% highlight bash %}
 git checkout 'v1.2.3'
+{% endhighlight %}
 
 Rebase the current mybranch on master
+{% highlight bash %}
 git checkout mybranch
 git rebase master
 git checkout master
 git merge mybranch
+{% endhighlight %}
 
 get changes to origin master
+{% highlight bash %}
 git fetch
+{% endhighlight %}
 
 move local master commits after the commits from origin/master.
+{% highlight bash %}
 git rebase
+{% endhighlight %}
 
 continue reabse after resolving a conflict
+{% highlight bash %}
 git rebase --continue
+{% endhighlight %}
 
 view log, one line
+{% highlight bash %}
 git log --oneline
+{% endhighlight %}
 
 compare branch with master
+{% highlight bash %}
 git diff master mybranch
+{% endhighlight %}
 
- a diff that includes the previous commit, as well as its parent.
- git diff HEAD~2
+a diff that includes the previous commit, as well as its parent.
+{% highlight bash %}
+git diff HEAD~2
+{% endhighlight %}
 
- get commit and diff info (-p patch)
- git log -p
+get commit and diff info (-p patch)
+{% highlight bash %}
+git log -p
+{% endhighlight %}
 
- get author and diff info
- git blame index.html
+get author and diff info
+{% highlight bash %}
+git blame index.html
+{% endhighlight %}
 
- create alias
- git config alias.co checkout
+create alias
+{% highlight bash %}
+git config alias.co checkout
+{% endhighlight %}
 
 rebase with master
+{% highlight bash %}
 git rebase master
+{% endhighlight %}
 
+{% highlight bash %}
 git stash save 'test'
+{% endhighlight %}
 
+{% highlight bash %}
 git stash list
+{% endhighlight %}
 
+{% highlight bash %}
 git stash apply
+{% endhighlight %}
 
+{% highlight bash %}
 git stash drop
+{% endhighlight %}
 
+{% highlight bash %}
 git stash --keep-index
+{% endhighlight %}
 
+{% highlight bash %}
 git stash list --stat
+{% endhighlight %}
 
+{% highlight bash %}
 git stash show --patch stash@{2}
+{% endhighlight %}
 
+{% highlight bash %}
 git stash branch mybranch
+{% endhighlight %}
 
 unix file endings on commit
+{% highlight bash %}
 git config core.autocrlf input
+{% endhighlight %}
 
 convert line endings from Unix to Windows formats on checkout.
+{% highlight bash %}
 git config core.autocrlf true
+{% endhighlight %}
 
 .gitattributes
+{% highlight bash %}
 *     text=auto
 *.rb text
 *.js text
@@ -180,50 +272,85 @@ git config core.autocrlf true
 *.sh text eol=lf
 
 *.png binary
+{% endhighlight %}
 
+{% highlight bash %}
 git cherry-pick 3fbd473
+{% endhighlight %}
 
 edit and change message
+{% highlight bash %}
 git cherry-pick -e 3fbd473 -m 'test'
+{% endhighlight %}
 
+{% highlight bash %}
 git cherry-pick --no-commit b447335 b59d285
+{% endhighlight %}
 
 cherry pick keep where it comes from
+{% highlight bash %}
 git cherry-pick -x bdf9578
+{% endhighlight %}
 
 with person who signed off
+{% highlight bash %}
 git cherry-pick -x --signoff bdf9578
+{% endhighlight %}
 
 git add submodule
+{% highlight bash %}
 git submodule add git@petstore.com:gallery_js.git
+{% endhighlight %}
 
+{% highlight bash %}
 git submodule init
+{% endhighlight %}
 
+{% highlight bash %}
 git submodule update
+{% endhighlight %}
 
 apply detached commit on to branch, mybranch
+{% highlight bash %}
 git branch mybranch a7eded4
+{% endhighlight %}
 
 check if submodules require pushes
+{% highlight bash %}
 git push --recurse-submodules check
+{% endhighlight %}
 
 push submodules when needed
+{% highlight bash %}
 git push --recurse-submodules on-demand
+{% endhighlight %}
 
 alias for above
+{% highlight bash %}
 git config alias.pushall 'push --recurse-submodules=on-demand'
+{% endhighlight %}
 
 move code & index to a commit
+{% highlight bash %}
 git reset --hard ab27026
+{% endhighlight %}
 
 see local head changes
+{% highlight bash %}
 git reflog
+{% endhighlight %}
 
 force delete branch
+{% highlight bash %}
 git branch -D mybranch
+{% endhighlight %}
 
 find last commit on deleted branch
+{% highlight bash %}
 git log --walk-reflogs
+{% endhighlight %}
 
 create branch from a commit
+{% highlight bash %}
 git branch mybranch aaafb5e3e33a174a5cb5f45c543d3dd927dfdf32
+{% endhighlight %}
