@@ -19,6 +19,19 @@ create alias
 git config alias.co checkout
 {% endhighlight %}
 
+Common shortcut aliases
+{% highlight bash %}
+[alias]
+    st = status
+    ci = commit
+    br = branch
+    co = checkout
+    df = diff
+    dc = diff --cached
+    lg = log -p
+    who = shortlog -s --
+{% endhighlight %}
+
 unix platform, fix any rogue windows line endings by converting to lf on commit
 {% highlight bash %}
 git config core.autocrlf input
