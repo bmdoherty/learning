@@ -35,8 +35,8 @@ git config core.autocrlf true
 *.rb text
 *.js text
 
-*.bat text eol=crlf
-*.sh text eol=lf
+*.bat text eol=crlf #batch is windows so crlf
+*.sh text eol=lf #shell is *nix so lf
 
 *.png binary
 {% endhighlight %}
