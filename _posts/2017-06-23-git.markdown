@@ -19,19 +19,19 @@ create alias
 git config alias.co checkout
 {% endhighlight %}
 
-unix file endings on commit
+unix platform, fix any rogue windows line endings by converting to lf on commit
 {% highlight bash %}
 git config core.autocrlf input
 {% endhighlight %}
 
-convert line endings from Unix to Windows formats on checkout.
+windows platform, convert line endings from Unix to Windows formats on checkout.
 {% highlight bash %}
 git config core.autocrlf true
 {% endhighlight %}
 
 .gitattributes
 {% highlight bash %}
-*     text=auto
+*    text=auto
 *.rb text
 *.js text
 
@@ -41,6 +41,7 @@ git config core.autocrlf true
 *.png binary
 {% endhighlight %}
 
+<a href="https://git-scm.com/book/en/v2/Customizing-Git-Git-Configuration">scm git cofiguration</a>
 <hr>
 
 Set up a new Git repo within the current directory.
