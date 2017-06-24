@@ -9,9 +9,39 @@ categories: [one, two]
 
 Notes on using Git.
 
+<h3>Config</h3>
 {% highlight bash %}
 git config --global user.name 'bmdoherty'
 {% endhighlight %}
+
+create alias
+{% highlight bash %}
+git config alias.co checkout
+{% endhighlight %}
+
+unix file endings on commit
+{% highlight bash %}
+git config core.autocrlf input
+{% endhighlight %}
+
+convert line endings from Unix to Windows formats on checkout.
+{% highlight bash %}
+git config core.autocrlf true
+{% endhighlight %}
+
+.gitattributes
+{% highlight bash %}
+*     text=auto
+*.rb text
+*.js text
+
+*.bat text eol=crlf
+*.sh text eol=lf
+
+*.png binary
+{% endhighlight %}
+
+<hr>
 
 Set up a new Git repo within the current directory.
 {% highlight bash %}
@@ -210,10 +240,7 @@ get author and diff info
 git blame index.html
 {% endhighlight %}
 
-create alias
-{% highlight bash %}
-git config alias.co checkout
-{% endhighlight %}
+
 
 rebase with master
 {% highlight bash %}
@@ -252,27 +279,7 @@ git stash show --patch stash@{2}
 git stash branch mybranch
 {% endhighlight %}
 
-unix file endings on commit
-{% highlight bash %}
-git config core.autocrlf input
-{% endhighlight %}
 
-convert line endings from Unix to Windows formats on checkout.
-{% highlight bash %}
-git config core.autocrlf true
-{% endhighlight %}
-
-.gitattributes
-{% highlight bash %}
-*     text=auto
-*.rb text
-*.js text
-
-*.bat text eol=crlf
-*.sh text eol=lf
-
-*.png binary
-{% endhighlight %}
 
 {% highlight bash %}
 git cherry-pick 3fbd473
