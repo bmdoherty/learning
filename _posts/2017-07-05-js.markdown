@@ -10,9 +10,9 @@ Notes on javascript.
 
 <h2>Interview Questions</h2>
 
-<h2>Object comparision</h2>
+<h4>Object comparision</h4>
 <div class="alert alert-danger">
-  Bad
+  Bad, direct object equality tests checks if it is the same object in memory
 </div>
 
 {% highlight javascript %}
@@ -28,7 +28,7 @@ greet({ name: 'amy' })
 {% endhighlight %}
 
 <div class="alert alert-success">
-  Good
+  Good, or better use library (lodash) for deep compare
 </div>
 {% highlight javascript %}
   if (JSON.stringify(person) == JSON.stringify({ name: 'amy' })) {
