@@ -150,6 +150,17 @@ git checkout master
 git merge mybranch
 {% endhighlight %}
 
+remove untracked files
+{% highlight bash %}
+git clean -n
+git clean -f
+{% endhighlight %}
+
+remove untracked directories
+{% highlight bash %}
+git clean -n
+git clean -f
+{% endhighlight %}
 
 git pull to fetch and merge at the same time
 {% highlight bash %}
