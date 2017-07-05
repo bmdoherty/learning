@@ -6,7 +6,8 @@ img: image-2.png
 categories: two
 ---
 
-remove untracked directories
+Notes on javascript.
+
 {% highlight javascript %}
 function greet(person) {
   
