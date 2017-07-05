@@ -8,14 +8,28 @@ categories: two
 
 Notes on javascript.
 
+<h2>Interview Questions</h2>
+
+<h2>Object comparision</h2>
+<div class="alert alert-danger">
+  Bad
+</div>
+
 {% highlight javascript %}
 function greet(person) {
   
-  if (JSON.stringify(person) == JSON.stringify({ name: 'amy' })) {
+  if (person == { name: 'amy' }) {
     return 'hey amy'
   } else {
     return 'hey arnold'
   }
 }
 greet({ name: 'amy' })
+{% endhighlight %}
+
+<div class="alert alert-success">
+  Good
+</div>
+{% highlight javascript %}
+  if (JSON.stringify(person) == JSON.stringify({ name: 'amy' })) {
 {% endhighlight %}
