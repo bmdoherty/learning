@@ -22,7 +22,7 @@ git config alias.co checkout
 Common shortcut aliases
 {% highlight bash %}
 [alias]
-    st = status
+    st = status -s #silent mode
     ci = commit
     br = branch
     co = checkout
@@ -31,10 +31,12 @@ Common shortcut aliases
     cp = cherry-pick
     cl = clone
 
+    unstage = reset HEAD --
+    last = log -1 HEAD
+
     lg = log -p
     who = shortlog -s --
     ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
-    ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
 {% endhighlight %}
 
 unix platform, fix any rogue windows line endings by converting to lf on commit
@@ -45,6 +47,11 @@ git config core.autocrlf input
 windows platform, convert line endings from Unix to Windows formats on checkout.
 {% highlight bash %}
 git config core.autocrlf true
+{% endhighlight %}
+
+Default new branches to fetch then rebase
+{% highlight bash %}
+git config --global pull.rebase true
 {% endhighlight %}
 
 .gitattributes
@@ -395,4 +402,11 @@ git log --walk-reflogs
 create branch from a commit
 {% highlight bash %}
 git branch mybranch aaafb5e3e33a174a5cb5f45c543d3dd927dfdf32
+{% endhighlight %}
+
+create upstream
+{% highlight bash %}
+git remote add upstream https://github.com/deadlyvipers/dojo_rules.git
+git fetch upstream
+git merge upstream/master master
 {% endhighlight %}
