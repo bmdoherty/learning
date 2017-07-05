@@ -2,7 +2,7 @@
 layout: post
 title:  "JS Guide"
 categories: learning update
-img: image-2.png
+img: js.png
 categories: two
 ---
 
