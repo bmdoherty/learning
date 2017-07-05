@@ -162,6 +162,11 @@ git clean -n
 git clean -f
 {% endhighlight %}
 
+rename file
+{% highlight bash %}
+git mv old_filename new_filename
+{% endhighlight %}
+
 git pull to fetch and merge at the same time
 {% highlight bash %}
 git pull

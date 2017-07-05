@@ -1,0 +1,20 @@
+---
+layout: post
+title:  "JS Guide"
+categories: learning update
+img: image-2.png
+categories: two
+---
+
+remove untracked directories
+{% highlight javascript %}
+function greet(person) {
+  
+  if (JSON.stringify(person) == JSON.stringify({ name: 'amy' })) {
+    return 'hey amy'
+  } else {
+    return 'hey arnold'
+  }
+}
+greet({ name: 'amy' })
+{% endhighlight %}
