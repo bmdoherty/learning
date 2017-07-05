@@ -3,7 +3,7 @@ layout: post
 title:  "Git"
 date:   2017-06-23 10:51:47 +0100
 categories: git cheatsheet
-img: image-1.png
+img: git.png
 categories: [one, two]
 ---
 
