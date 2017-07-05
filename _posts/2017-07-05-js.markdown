@@ -11,25 +11,4 @@ Notes on javascript.
 <h2>Interview Questions</h2>
 
 <h4>Object comparision</h4>
-<div class="alert alert-danger">
-  Bad, direct object equality tests checks if it is the same object in memory
-</div>
-
-{% highlight javascript %}
-function greet(person) {
-  
-  if (person == { name: 'amy' }) {
-    return 'hey amy'
-  } else {
-    return 'hey arnold'
-  }
-}
-greet({ name: 'amy' })
-{% endhighlight %}
-
-<div class="alert alert-success">
-  Good, or better use library (lodash) for deep compare
-</div>
-{% highlight javascript %}
-  if (JSON.stringify(person) == JSON.stringify({ name: 'amy' })) {
-{% endhighlight %}
+<script src="https://gist.github.com/bmdoherty/f106a2474d84c1f9b6b8fff31db6b51d.js"></script>
